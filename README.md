@@ -8,7 +8,7 @@ Full-stack **deep learning** movie recommender: NCF model (MovieLens 100K), Fast
 
 1. **Backend:** `cd backend && cp .env.example .env && php artisan key:generate && php artisan migrate && php artisan db:seed --class=MovieLensSeeder && php artisan serve --port=8001`
 2. **ML (train once):** `source venv/bin/activate && pip install -r ml-api/requirements.txt && python ml-api/cli.py train` (from project root)
-3. **ML API:** `source venv/bin/activate && uvicorn ml-api.main:app --reload --port 8000` (from project root)
+3. **ML API:** `source venv/bin/activate && cd ml-api && uvicorn main:app --reload --port 8000` (from project root)
 4. **Frontend:** `cd frontend && npm install && npm run dev`
 5. Open **http://localhost:3000**
 

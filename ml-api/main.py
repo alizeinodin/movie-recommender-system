@@ -2,8 +2,8 @@
 FastAPI service that exposes the NCF model for movie recommendations.
 Best practices: deterministic inference, in-memory cache per user, eval mode.
 
-Run from project root: uvicorn ml-api.main:app --reload --host 0.0.0.0 --port 8000
-Or from ml-api directory: uvicorn main:app --reload --port 8000
+Run from ml-api directory: cd ml-api && uvicorn main:app --reload --port 8000
+(From project root: cd ml-api && uvicorn main:app --reload --port 8000)
 """
 import sys
 from pathlib import Path

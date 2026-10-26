@@ -27,7 +27,7 @@ python ml-api/cli.py evaluate
 python ml-api/cli.py demo
 
 # Start the API (for Laravel/frontend)
-uvicorn ml-api.main:app --reload --port 8000
+cd ml-api && uvicorn main:app --reload --port 8000
 ```
 
 From **ml-api** directory you can also run: `python cli.py train`, `uvicorn main:app --port 8000`.

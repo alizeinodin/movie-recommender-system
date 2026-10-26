@@ -54,7 +54,7 @@ Then start the ML API (from **project root**):
 
 ```bash
 source venv/bin/activate
-uvicorn ml-api.main:app --reload --host 0.0.0.0 --port 8000
+cd ml-api && uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 Laravel calls **http://127.0.0.1:8000/recommend?user_id={id}&top_k=10** (same as `python ml-api/cli.py demo`).  
@@ -98,7 +98,7 @@ You can change the “User” dropdown to see different recommendation lists (Mo
 
 2. **Terminal 2 – ML API**
    ```bash
-   source venv/bin/activate && uvicorn ml-api.main:app --reload --port 8000
+   source venv/bin/activate && cd ml-api && uvicorn main:app --reload --port 8000
    ```
    (Ensure `ml-api/models/ncf_model.pth` exists: run `python ml-api/cli.py train` once.)
 
